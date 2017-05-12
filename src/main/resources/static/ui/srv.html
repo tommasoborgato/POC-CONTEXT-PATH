@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRV</title>
+</head>
+<body>
+
+<h1>SRV RESOURCE: All Services are located under /srv</h1>
+<a href="ui.html">UI CONTENT</a>
+
+<div style="border: 1px solid green;margin-bottom: 20px;top: 20px">
+    <label>
+        Relative path (relative to /ngpt/ui): srv/test
+        <b>ERROR: SERVICES ARE ALL LOCATED STARTING AT /srv</b>
+    </label>
+    <iframe src="srv/test" width="200" height="65" style="border: 1px solid gray;padding: 0px;"></iframe>
+</div>
+
+<div style="border: 1px solid red;margin-bottom: 20px">
+    <label>
+        Absolute path : /srv/test
+        <b>ERROR</b>
+    </label>
+    <iframe src="/srv/test" width="200" height="65" style="border: 1px solid gray;padding: 0px;"></iframe>
+</div>
+
+<div style="border: 1px solid gray;margin-bottom: 20px">
+    <label>
+        Absolute path with hard-coded context path: /ngpt/img/spring-by-pivotal.png
+        <b>ERROR : IF /ngpt CHANGES THE LINK IS BROCKEN</b>
+    </label>
+    <iframe src="/ngpt/srv/test" width="200" height="65" style="border: 1px solid gray"></iframe>
+</div>
+
+</body>
+</html>
